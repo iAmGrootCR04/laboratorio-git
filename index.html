@@ -3,63 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Básico de Git - Laboratorio 2</title>
+    <title>Laboratorio 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <header>
-        <h1>Introducción a Git</h1>
-        <p>Guía rápida para el control de versiones</p>
+    <header class="bg-dark text-white text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="display-4">Dominando Git</h1>
+            <p class="lead">Guía práctica para el control de versiones en proyectos web</p>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>¿Qué es Git?</h2>
-            <p>Git es un sistema de control de versiones distribuido, diseñado para manejar todo, desde proyectos pequeños hasta muy grandes, con rapidez y eficiencia.</p>
-        </section>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <section class="card shadow-sm p-4 mb-4">
+                    <h2 class="text-primary">¿Qué es el Control de Versiones?</h2>
+                    <p>Es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que sea posible recuperar versiones específicas más adelante.</p>
+                    <p>Git permite que varios desarrolladores trabajen en el mismo proyecto simultáneamente sin sobrescribir el trabajo de los demás mediante el uso de <strong>ramas</strong>.</p>
+                </section>
 
-        <section>
-            <h2>Comandos Esenciales</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Comando</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>git init</code></td>
-                        <td>Inicializa un nuevo repositorio local.</td>
-                    </tr>
-                    <tr>
-                        <td><code>git add .</code></td>
-                        <td>Prepara todos los cambios para el próximo commit.</td>
-                    </tr>
-                    <tr>
-                        <td><code>git commit -m "mensaje"</code></td>
-                        <td>Registra los cambios en el historial.</td>
-                    </tr>
-                    <tr>
-                        <td><code>git status</code></td>
-                        <td>Muestra el estado actual de los archivos.</td>
-                    </tr>
-                    <tr>
-                        <td><code>git push</code></td>
-                        <td>Sube los cambios al repositorio remoto.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <section class="card shadow-sm p-4 mb-4">
+                    <h2 class="text-primary">Instalación y Configuración</h2>
+                    <p>Antes de empezar, debes configurar tu identidad en la terminal:</p>
+                    <div class="bg-dark text-light p-3 rounded">
+                        <code>git config --global user.name "Tu Nombre"</code><br>
+                        <code>git config --global user.email "tu@email.com"</code>
+                    </div>
+                </section>
+            </div>
 
-        <section>
-            <h2>El Ciclo de Trabajo</h2>
-            <p>El flujo básico consiste en modificar archivos, añadirlos al <em>Staging Area</em> y luego confirmar los cambios con un commit.</p>
-        </section>
+            <div class="col-md-5">
+                <section class="card shadow-sm p-4 mb-4 bg-white">
+                    <h3 class="h5">Estados de un Archivo</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Modified:</strong> Cambios realizados pero no confirmados.</li>
+                        <li class="list-group-item"><strong>Staged:</strong> Cambios marcados para ir en la próxima captura.</li>
+                        <li class="list-group-item"><strong>Committed:</strong> Datos almacenados de forma segura en la base local.</li>
+                    </ul>
+                </section>
+
+                <section class="card shadow-sm p-4 mb-4 bg-info text-white">
+                    <h3 class="h5">Dato Curioso</h3>
+                    <p class="small mb-0">Git fue creado en 2005 por Linus Torvalds, el mismo creador del kernel de Linux, tras tener problemas con el sistema que usaban anteriormente.</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <section class="card shadow-sm p-4 mb-5">
+                    <h2 class="text-primary">Comandos de Ramas (Branches)</h2>
+                    <div class="table-responsive">
+                        <table class="table table-hover mt-3">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Acción</th>
+                                    <th>Comando</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Crear nueva rama</td>
+                                    <td><code>git branch nombre-rama</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Cambiar de rama</td>
+                                    <td><code>git checkout nombre-rama</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Fusionar ramas</td>
+                                    <td><code>git merge nombre-rama</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Eliminar rama</td>
+                                    <td><code>git branch -d nombre-rama</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="text-center py-4 text-muted border-top bg-white">
         <p>&copy; 2026 - Laboratorio 2 - Informática Empresarial</p>
     </footer>
 
