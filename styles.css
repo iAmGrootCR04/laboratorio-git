@@ -1,27 +1,30 @@
-/* Ajustes para complementar Bootstrap */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
 }
 
 header {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
 }
 
 .card {
     border: none;
-    transition: transform 0.2s;
+    transition: all 0.3s ease; 
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 code {
-    color: #e83e8c;
+    color: #27ae60;
     word-wrap: break-word;
+    font-weight: bold;
 }
 
 h2 {
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
 }
